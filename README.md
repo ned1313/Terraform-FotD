@@ -6,4 +6,4 @@ In a series of [posts][1] I am going to document a different Terraform function 
 
 During the course of these posts I am also going to include the examples on this GitHub repo, so you can pull the code whenever you want.
 
-[1] https://nedinthecloud.com/tag/fotd/
+ [1]: https://nedinthecloud.com/tag/fotd/
