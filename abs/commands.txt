@@ -1,1 +1,7 @@
+terraform apply -var 'abs=5'
+terraform apply -var 'abs=-5'
+terraform apply -var 'abs=3.14159'
+terraform apply -var 'abs=3.14149'
+terraform apply -var 'abs="-1"'
+terraform apply -var 'abs="String"'
 terraform apply

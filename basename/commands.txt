@@ -1,1 +1,8 @@
-terraform apply
+terraform apply -var 'basename=C:\\'
+terraform apply -var 'basename=C:\\level0\\level1\\level2'
+terraform apply -var 'basename=C:\\level0\\level1\\level2\\'
+terraform apply -var 'basename=C:\\level0\\level1\\level2\\file1.txt'
+terraform apply -var 'basename=/'
+terraform apply -var 'basename=/level0/level1/level2'
+terraform apply -var 'basename=/level0/level1/level2/'
+terraform apply -var 'basename=/level0/level1/level2/file1.txt'
