@@ -4,3 +4,9 @@ $fileContentBytes = [System.Text.Encoding]::UTF8.GetBytes($fileContent)
 $fileContentEncoded = [System.Convert]::ToBase64String($fileContentBytes)
 
 terraform apply -var "base64decode=$fileContentEncoded"
+
+#Should output ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+terraform apply -var "base64decode=QUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVowMTIzNDU2Nzg5"
+
+#Empty string test
+terraform apply -var "base64decode="

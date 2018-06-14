@@ -1,9 +1,12 @@
-terraform apply -var 'basename=C:\\'
-terraform apply -var 'basename=C:\\level0\\level1\\level2'
-terraform apply -var 'basename=C:\\level0\\level1\\level2\\'
-terraform apply -var 'basename=C:\\level0\\level1\\level2\\file1.txt'
-terraform apply -var 'basename=/'
-terraform apply -var 'basename=/level0/level1/level2'
-terraform apply -var 'basename=/level0/level1/level2/'
-terraform apply -var 'basename=/level0/level1/level2/file1.txt'
-terraform apply -var 'basename='
+#We have to encode something first
+$fileContent = get-content .\terraform_image.png
+$fileContentBytes = [System.Text.Encoding]::UTF8.GetBytes($fileContent)
+$fileContentEncoded = [System.Convert]::ToBase64String($fileContentBytes)
+
+terraform apply -var "base64decode=$fileContentEncoded"
+
+#Should output ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+terraform apply -var "base64decode=QUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVowMTIzNDU2Nzg5"
+
+#Empty string test
+terraform apply -var "base64decode="
