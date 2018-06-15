@@ -1,12 +1,10 @@
-#We have to encode something first
-$fileContent = get-content .\terraform_image.png
-$fileContentBytes = [System.Text.Encoding]::UTF8.GetBytes($fileContent)
-$fileContentEncoded = [System.Convert]::ToBase64String($fileContentBytes)
+#We have to get something to encode first
+$fileContent = Get-Content .\textFile.txt
 
-terraform apply -var "base64decode=$fileContentEncoded"
+terraform apply -var "base64encode=$fileContent"
 
-#Should output ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
-terraform apply -var "base64decode=QUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVowMTIzNDU2Nzg5"
+#Should output QUJDREVGR0hJSktMTU5PUFFSU1RVVldYWVowMTIzNDU2Nzg5
+terraform apply -var "base64encode=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 
 #Empty string test
-terraform apply -var "base64decode="
+terraform apply -var "base64encode="
