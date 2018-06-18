@@ -1,0 +1,8 @@
+#Since we are using the local provider we need to initialize
+terraform init
+
+#Should output a local file named output.gzip
+terraform apply
+
+#Apply it to any file you'd like!
+terraform apply -var "sourcefile=\Path\to\a\source\text\file.txt"
