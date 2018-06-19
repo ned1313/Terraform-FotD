@@ -1,0 +1,8 @@
+#Start with the default variable
+terraform apply
+
+#Try submitting a string
+terraform apply -var 'base64sha512="Oh freddled gruntbuggly, Thy micturations are to me, As plurdled gabbleblotchits on a lurgid bee."'
+
+#Empty string test
+terraform apply -var "base64sha512="
