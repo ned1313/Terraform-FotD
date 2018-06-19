@@ -10,7 +10,9 @@ provider "aws" {
 ##############################################
 # Variables
 ##############################################
-#variable "base64gzip" {}
+variable "base64gzip" {
+  default = "1234"
+}
 
 variable "sourcefile" {
   default = "input.txt"
@@ -51,4 +53,8 @@ resource "aws_s3_bucket_object" "object" {
 ##############################################
 output "file" {
   value = "https://${aws_s3_bucket.bucket.bucket_domain_name}/${aws_s3_bucket_object.object.id}"
+}
+
+output "base64gzip " {
+  value = "${base64gzip (var.base64gzip )}"
 }
