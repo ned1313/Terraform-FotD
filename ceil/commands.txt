@@ -1,0 +1,7 @@
+terraform apply -var 'ceil=5.9'
+terraform apply -var 'ceil=-5.9'
+terraform apply -var 'ceil=3.1'
+terraform apply -var 'ceil=-3.1'
+terraform apply -var 'ceil="-1"'
+terraform apply -var 'ceil="String"'
+terraform apply
