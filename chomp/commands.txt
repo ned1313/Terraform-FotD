@@ -1,0 +1,20 @@
+#Create strings in PowerShell to test
+$something = "String with one newline`n"
+terraform apply -var "chomp=$something" -auto-approve
+
+$something = "String with two newlines`n`n"
+terraform apply -var "chomp=$something" -auto-approve
+
+$something = "String with two lines`n Second line"
+terraform apply -var "chomp=$something" -auto-approve
+
+$something = "String with two lines`n Second line with newline `n"
+terraform apply -var "chomp=$something" -auto-approve
+
+#Just newlines
+$something = "`n`n`n`n`n"
+terraform apply -var "chomp=$something" -auto-approve
+
+#Empty string
+terraform apply -var "chomp="
+
