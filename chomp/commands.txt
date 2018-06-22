@@ -1,3 +1,6 @@
+#Initialize for local_file resource
+terraform init
+
 #Create strings in PowerShell to test
 $something = "String with one newline`n"
 terraform apply -var "chomp=$something" -auto-approve
