@@ -1,0 +1,13 @@
+terraform apply -var "chunklist_size=1"
+
+terraform apply -var "chunklist_size=2"
+
+terraform apply -var "chunklist_size=3"
+
+terraform apply -var "chunklist_size=4"
+
+terraform apply -var "chunklist_size=5"
+
+#Empty list
+terraform apply -var "chunklist=[]"
+
