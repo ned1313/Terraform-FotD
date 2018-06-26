@@ -1,0 +1,16 @@
+terraform apply -var "iprange=172.16.0.0/24" -var "hostnum=2"
+
+terraform apply -var "iprange=172.16.0.0/19" -var "hostnum=12"
+
+terraform apply -var "iprange=192.168.0.1/25" -var "hostnum=17"
+
+terraform apply -var "iprange=156.25.42.0/19" -var "hostnum=100"
+
+terraform apply -var "iprange=172.16.2.128/27" -var "hostnum=-5"
+
+#Fails with missing mask
+terraform apply -var "iprange=172.16.0.0" -var "hostnum=2"
+
+#Fails with no available ip address
+terraform apply -var "iprange=172.16.0.0/32" -var "hostnum=2"
+
