@@ -1,0 +1,16 @@
+terraform apply -var "iprange=172.16.0.0/8"
+
+terraform apply -var "iprange=172.16.0.0/16"
+
+terraform apply -var "iprange=1.1.1.1/24"
+
+terraform apply -var "iprange=156.25.42.0/0"
+
+terraform apply -var "iprange=172.16.2.128/32"
+
+#Fails with invalid CIDR expression
+terraform apply -var "iprange=172.16.2.128/33"
+
+#Fails with missing mask
+terraform apply -var "iprange=172.16.0.0"
+
