@@ -2,7 +2,7 @@ terraform apply -var "iprange=172.16.0.0/24" -var "newbits=2" -var "netnum=0"
 
 terraform apply -var "iprange=172.16.0.0/24" -var "newbits=4" -var "netnum=2"
 
-terraform apply -var "iprange=172.16.0.0/24" -var "newbits=8" -var "netnum=20"
+terraform apply -var "iprange=172.16.0.0/24" -var "newbits=-8" -var "netnum=20"
 
 terraform apply -var "iprange=10.0.0.0/8" -var "newbits=16" -var "netnum=40"
 
