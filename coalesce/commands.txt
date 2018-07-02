@@ -1,0 +1,15 @@
+#Evaluate to one
+terraform apply -var "1_string=one" -var "2_string=two" -var "3_string=three" -var "4_string=four"
+
+#First string is empty, evaluate to second string
+terraform apply -var "1_string=" -var "2_string=two" -var "3_string=three" -var "4_string=four"
+
+#What will a default value of bool false do? Evaluate as string 0
+terraform apply -var "2_string=two" -var "3_string=three" -var "4_string=four"
+
+#What will a default value of int 0 do? Evaluate as string 0
+terraform apply -var "1_string=" -var "3_string=three" -var "4_string=four"
+
+#All empty, evaluate to empty
+terraform apply -var "1_string=" -var "2_string=" -var "3_string=" -var "4_string="
+
