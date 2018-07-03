@@ -1,0 +1,12 @@
+#Evaluate to "one", "two", "three"]
+terraform apply -var-file="example1.tfvars"
+
+#Is an list of empty lists empty? Nope, list_2 will be returned
+terraform apply
+
+#What about a list of boolean false values? Evaluates to all 0s
+terraform apply -var "list_2=[]"
+
+#All empty, evaluate to empty
+terraform apply -var "list_2=[]" -var "list_3=[]" -var "list_4=[]"
+
