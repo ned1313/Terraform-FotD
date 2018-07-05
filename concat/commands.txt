@@ -1,0 +1,9 @@
+#List of different value types is fine
+terraform apply
+
+#Cannot combine nested lists and regular lists
+terraform apply -var-file="example1.tfvars"
+
+#All nested lists works
+terraform apply -var-file="example1.tfvars" -var "list_4=[]"
+
