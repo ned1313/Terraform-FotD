@@ -1,0 +1,28 @@
+#Windows tests
+#Try the root directory
+terraform apply -var 'dirname=C:\\'
+
+#Try without a file extension
+terraform apply -var 'dirname=C:\\level0\\level1\\level2'
+
+#Try with trailing Windows backslash
+terraform apply -var 'dirname=C:\\level0\\level1\\level2\\'
+
+#Try with file
+terraform apply -var 'dirname=C:\\level0\\level1\\level2\\file1.txt'
+
+#Linux tests
+#Try the root directory
+terraform apply -var 'dirname=/'
+
+#Try without a file extension
+terraform apply -var 'dirname=/level0/level1/level2'
+
+#Try with trailing forward slash
+terraform apply -var 'dirname=/level0/level1/level2/'
+
+#Try with file
+terraform apply -var 'dirname=/level0/level1/level2/file1.txt'
+
+#Try empty value
+terraform apply -var 'dirname='
