@@ -5,7 +5,7 @@
 # Variables
 ##############################################
 variable "string_list" {
-  default = ["So", "so", "long", "long"]
+  default = ["So", "so", "long", "long", "so"]
 }
 
 variable "int_duplicates" {
@@ -26,6 +26,10 @@ variable "empty_list" {
 
 variable "bool_list" {
   default = [false, true, false, true]
+}
+
+variable "nested_list" {
+  default = [[1, 2, 3], [1, 2, 3]]
 }
 
 ##############################################
@@ -64,4 +68,9 @@ output "5_empty_list" {
 #Test what will happen with a list boolean values
 output "6_bool_list" {
   value = "${distinct(var.bool_list)}"
+}
+
+#Flatten a nested list and then distinct
+output "7_nested_list" {
+  value = "${distinct(flatten(var.nested_list))}"
 }
