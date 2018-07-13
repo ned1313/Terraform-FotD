@@ -2,4 +2,3 @@ terraform apply -var 'file1=input.txt' -var "file2=input.txt"
 terraform apply -var 'file1=.\\input.txt' -var "file2=input.txt"
 terraform apply -var 'file1=.\\module\\mod_input.txt' -var "file2=input.txt"
 terraform apply -var "file1=.\\module\\input-noext" -var "file2=input.txt"
-
