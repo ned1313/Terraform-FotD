@@ -13,7 +13,7 @@ variable "list_2" {
 }
 
 variable "list_3" {
-  default = [0, [1, 2, 3], [4, 5, 6], [7, 8], 9]
+  default = [0, [1, 2, 3], [4, 5, 6], [7, 8], 9, 0]
 }
 
 variable "list_4" {
