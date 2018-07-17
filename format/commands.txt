@@ -1,0 +1,11 @@
+#Using defaults
+terraform apply
+
+#Try a negative float
+terraform apply -var "float_1=-3.14159"
+
+#Try a negative int
+terraform apply -var "int_1=-42"
+
+#Try a different string
+terraform apply -var "string_1=Trillian"
