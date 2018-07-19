@@ -1,0 +1,11 @@
+#We have to get the local resource first
+terraform init
+
+#Default values
+terraform apply
+
+#negative spaces will crash Terraform
+terraform apply -var "spaces=-1"
+
+#Empty string test
+terraform apply -var "indent="
