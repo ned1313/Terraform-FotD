@@ -1,0 +1,11 @@
+#Using defaults
+terraform apply
+
+#Try using a string instead of list
+terraform apply -var "string_list='cat'"
+
+#Try using an empty list, may crash Terraform
+terraform apply -var "string_list=[]"
+
+#Try two different size lists, will fail on a mismatch
+terraform apply -var "int_list=[1,2]"
