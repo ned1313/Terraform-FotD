@@ -46,6 +46,10 @@ output "format_float_precision" {
   value = "${format("%+.3f",var.float_1 + 0.0)}"
 }
 
+output "string_int_combo" {
+  value = "${format("%v-%03d",var.string_1,var.int_1 + 0)}"
+}
+
 output "format_bool" {
   value = "${format("%t",true)}"
 }
