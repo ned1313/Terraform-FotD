@@ -45,7 +45,7 @@ output "formatlist_one_item" {
 }
 
 output "formatlist_same_items" {
-  value = "${formatlist("%v-%v",var.string_list,var.int_list)}"
+  value = "${formatlist("%v-%02v",var.string_list,var.int_list)}"
 }
 
 output "formatlist_three_items" {
