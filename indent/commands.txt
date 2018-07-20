@@ -7,5 +7,5 @@ terraform apply
 #negative spaces will crash Terraform
 terraform apply -var "spaces=-1"
 
-#Empty string test
+#Empty string test works just fine
 terraform apply -var "indent="
