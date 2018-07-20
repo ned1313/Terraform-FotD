@@ -1,0 +1,8 @@
+#Default examples
+terraform apply
+
+#Cannot find list element
+terraform apply -var "string_list=[]"
+
+#int or string doesn't matter
+terraform apply -var 'int_list=["41","42"]'
