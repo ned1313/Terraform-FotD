@@ -20,6 +20,22 @@ variable "empty_map" {
   default = {}
 }
 
+variable "nested_map" {
+  type = "map"
+
+  default = {
+    "map_one" = {
+      "key_1-1" = "value_1-1"
+      "key_1-2" = "value_1-2"
+    }
+
+    "map_two" = {
+      "key_2-1" = "value_2-1"
+      "key_2-2" = "value_2-2"
+    }
+  }
+}
+
 ##############################################
 # Resources
 ##############################################
@@ -38,4 +54,8 @@ output "2_map_function_output" {
 
 output "3_empty_map_output" {
   value = "${keys(var.empty_map)}"
+}
+
+output "4_nested_map_output" {
+  value = "${keys(var.nested_map)}"
 }
