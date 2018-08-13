@@ -1,0 +1,5 @@
+#All examples are in variables
+terraform apply
+terraform apply -var "lookup_key=everything"
+terraform apply -var "lookup_key=missing"
+
