@@ -1,5 +1,9 @@
-#All examples are in variables
+#Basic use
 terraform apply
+
+#Alternate key
 terraform apply -var "lookup_key=everything"
+
+#Non-existent key
 terraform apply -var "lookup_key=missing"
 
