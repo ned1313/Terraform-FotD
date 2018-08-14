@@ -12,3 +12,6 @@ terraform apply -var "lower=this is in all lowercase"
 
 #Empty string
 terraform apply -var "lower="
+
+#All standard US-EN characters
+terraform apply -var 'lower=QWERTYUIOPASDFGHJKLZXCVBNM1234567890,./;[]\<>?:"{}|~!@#$%^&*()_+-=`'
