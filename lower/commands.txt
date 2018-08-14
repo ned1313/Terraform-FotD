@@ -1,0 +1,14 @@
+#We have to get the local resource first
+terraform init
+
+#Default values
+terraform apply
+
+#All caps
+terraform apply -var "lower=THIS IS IN ALL CAPITALS"
+
+#Already lowercase
+terraform apply -var "lower=this is in all lowercase"
+
+#Empty string
+terraform apply -var "lower="
