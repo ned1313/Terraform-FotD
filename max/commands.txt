@@ -1,0 +1,14 @@
+#Regular values
+terraform apply -var 'max1=5.9' -var 'max2=4.9' -var 'max3=6.9' -var 'max4=5.4'
+
+#Negative values
+terraform apply -var 'max1=-5.9' -var 'max2=5.9' -var 'max3=3.9' -var 'max4=-3.9'
+
+#Same values
+terraform apply -var 'max1=5.9' -var 'max2=5.9' -var 'max3=5.9' -var 'max4=5.9'
+
+#Longer decimal point max out at 15
+terraform apply -var 'max1=5.12345678912345' -var 'max2=5.123456789123456' -var 'max3=5.1234567891234567' -var 'max4=5.12345678912345678'
+
+#Ints
+terraform apply -var 'max1=5' -var 'max2=6' -var 'max3=7' -var 'max4=8'
