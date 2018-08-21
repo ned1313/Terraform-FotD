@@ -1,0 +1,14 @@
+#Regular values
+terraform apply -var 'min1=5.9' -var 'min2=4.9' -var 'min3=6.9' -var 'min4=5.4'
+
+#Negative values
+terraform apply -var 'min1=-5.9' -var 'min2=5.9' -var 'min3=3.9' -var 'min4=-3.9'
+
+#Same values
+terraform apply -var 'min1=5.9' -var 'min2=5.9' -var 'min3=5.9' -var 'min4=5.9'
+
+#Longer decimal point max out at 15
+terraform apply -var 'min1=5.1123456789123456' -var 'min2=5.1123456789123455' -var 'min3=5.1123456789123454' -var 'min4=5.1123456789123453'
+
+#Ints
+terraform apply -var 'min1=5' -var 'min2=6' -var 'min3=7' -var 'min4=8'
