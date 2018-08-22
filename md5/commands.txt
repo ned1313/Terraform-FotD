@@ -1,0 +1,9 @@
+
+#Should return a26d69fa3acf4022a4505a0c823af393
+terraform apply -var "md5=amanaplanacanalpanama"
+
+#Should output 8D93AD635E2C8C822D796BD8726EEF6B
+terraform apply -var "md5=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+
+#Empty string test give d41d8cd98f00b204e9800998ecf8427e (whut?)
+terraform apply -var "md5="
