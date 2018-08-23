@@ -1,0 +1,19 @@
+#Windows tests
+#Try the home directory
+terraform apply -var 'pathexpand=~\'
+
+#Try with a file extension
+terraform apply -var 'pathexpand=~\test.txt'
+
+#Try non home path
+terraform apply -var 'pathexpand=C:\test.txt'
+
+#Linux tests
+#Try with home directory
+terraform apply -var 'pathexpand=~/'
+
+#Try with file
+terraform apply -var 'pathexpand=~/test.txt'
+
+#Try empty value
+terraform apply -var 'pathexpand='
