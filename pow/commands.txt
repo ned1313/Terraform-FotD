@@ -1,0 +1,11 @@
+#Basic functionality
+terraform apply -var 'base=2' -var 'exp=3'
+terraform apply -var 'base=-1' -var 'exp=3'
+terraform apply -var 'base=3.1' -var 'exp=-2'
+
+#Gives NaN, weird, guess it doesn't like decimal exponent
+terraform apply -var 'base=-3.1' -var 'exp=2.3'
+
+#Checking maximums, 308 seems to be the max
+terraform apply -var 'base=10' -var 'exp=309'
+terraform apply -var 'base=10' -var 'exp=308'
