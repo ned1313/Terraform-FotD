@@ -1,0 +1,11 @@
+#Standard replace
+terraform apply -var "search=Arthur" -var "replace=Zaphod"
+
+#Regex replace with or
+terraform apply -var "search=/Arthur|Ford/" -var "replace=Zaphod"
+
+#Empty replace is fine
+terraform apply -var "search=/Arthur|Ford/" -var "replace="
+
+#Emtpy search matches all characters except whitespace 
+terraform apply -var "search=" -var "replace=42"
