@@ -1,0 +1,13 @@
+#We have to generate a key pair first
+#You will need openssl to do this
+openssl genrsa -out private.key 2048
+
+#Then we have to encrypt a string
+openssl rsautl -encrypt -inkey .\private.key -in .\cleartext.txt -out encrypted.txt
+
+#And base64 encode it
+openssl enc -a -in .\encrypted.txt -out .\encrypted64.txt -none
+
+#Now we can use Terraform to decrypt
+terraform apply -var "encrypted_string_path=encrypted64.txt" -var "private_key_path=private.key"
+
