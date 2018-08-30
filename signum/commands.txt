@@ -1,0 +1,23 @@
+#base case returns 0
+terraform apply
+
+#negative 0 is fine
+terraform apply -var "signum=-0"
+
+#returns 1
+terraform apply -var "signum=1"
+
+#returns  -1
+terraform apply -var "signum=-1"
+
+#returns 1
+terraform apply -var "signum=42"
+
+#returns -1
+terraform apply -var "signum=-42"
+
+#errors, the max positive value is 1e+18
+terraform apply -var "signum=10000000000000000000"
+
+#errors, the max negative value is -1e+18
+terraform apply -var "signum=-10000000000000000000"
