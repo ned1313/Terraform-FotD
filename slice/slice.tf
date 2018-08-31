@@ -49,7 +49,7 @@ output "1c_slice_list" {
 
 #Test a standard int list
 output "2_int_list" {
-  value = "${slice(var.int_list,1,2)}"
+  value = "${slice(var.int_list,1,3)}"
 }
 
 #Test list of empty strings
