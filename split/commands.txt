@@ -1,0 +1,11 @@
+#Default values
+terraform apply
+
+#Comma delimited
+terraform apply -var "source=One,Two,Three,Four" -var "delimiter=,"
+
+#Double delimited
+terraform apply -var "source=One::Two::Three::Four" -var "delimiter=::"
+
+#Whitespace delimited - regular expressions not supported
+terraform apply -var "source=One Two Three Four" -var "delimiter=\s"
