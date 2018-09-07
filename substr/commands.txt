@@ -1,0 +1,14 @@
+#Standard substr
+terraform apply -var "offset=0" -var "length=5"
+
+#Both 0s
+terraform apply -var "offset=0" -var "length=0"
+
+#Negative offset
+terraform apply -var "offset=-5" -var "length=5"
+
+#Negative length
+terraform apply -var "offset=5" -var "length=-1"
+
+#Both Negative
+terraform apply -var "offset=-5" -var "length=-1"
