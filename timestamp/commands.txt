@@ -1,0 +1,2 @@
+#Not much to test
+terraform apply
