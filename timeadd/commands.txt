@@ -1,0 +1,22 @@
+# For your reference
+# ns = nanosecond
+# ms = millisecond
+# s = second
+# m = minute
+# h = hour
+# There is nothing bigger than an hour
+
+#Defaults
+terraform apply
+
+#Negative duration
+terraform apply -var="add=-1h"
+
+#Zero duration
+terraform apply -var="add=0h"
+
+#Multiple durations
+terraform apply -var="add=1h10m"
+
+#My favorite day, adding a year
+terraform apply -var="add=8760h" -var="date=2018-03-14T01:59:27Z"
