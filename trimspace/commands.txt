@@ -1,0 +1,17 @@
+#Test with newline
+$mystring = "String with one newline `n"
+terraform apply -var "trimspace=$mystring" 
+
+#Just spaces
+$mystring = "      "
+terraform apply -var "trimspace=$mystring" 
+
+#Empty String
+terraform apply -var "trimspace="
+
+
+#Spaces after newline
+$mystring = "String with one newline `nNext line   "
+terraform apply -var "trimspace=$mystring" 
+
+
