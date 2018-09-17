@@ -1,2 +1,6 @@
+<<<<<<< HEAD
+#Not much to test
+=======
 #No arguments for function
+>>>>>>> 3e1dc50f56d45dbb0d4527420d03e6dba4f2dc6f
 terraform apply

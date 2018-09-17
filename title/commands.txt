@@ -1,0 +1,11 @@
+#Default
+terraform apply
+
+#Inverse Caps, capitalizes everything
+terraform apply -var "source=oNCE uPON a tIME"
+
+#all lower case
+terraform apply -var "source=the restaurant at the end of the universe"
+
+#empty string
+terraform apply -var "source="
