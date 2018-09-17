@@ -1,0 +1,17 @@
+#We have to get the local resource first
+terraform init
+
+#Default values
+terraform apply
+
+#All caps
+terraform apply -var "upper=THIS IS IN ALL CAPITALS"
+
+#All lowercase
+terraform apply -var "upper=this is in all lowercase"
+
+#Empty string
+terraform apply -var "upper="
+
+#All standard US-EN characters
+terraform apply -var 'upper=qwertyuiopasdfghjklzxcvbnm1234567890,./;[]\<>?:"{}|~!@#$%^&*()_+-=`'
