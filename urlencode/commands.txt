@@ -1,0 +1,14 @@
+#We have to get something to encode first
+$fileContent = Get-Content .\textFile.txt
+
+terraform apply -var "urlencode=$fileContent"
+
+#Test out some special characters
+terraform apply -var "urlencode=Here's a string:  Bistromatically speaking I have a $40 check, with 20% gratuity, (don't forget the -2^e for service) & #1 for good measure."
+
+#More fun
+$testString = 'HI!@#$%^&*()_+-=;,./?\|`~BYE'
+terraform apply -var "urlencode=$testString"
+
+#Empty string test
+terraform apply -var "urlencode="
